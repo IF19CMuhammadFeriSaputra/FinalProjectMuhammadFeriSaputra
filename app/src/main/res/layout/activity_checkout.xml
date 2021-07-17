@@ -40,7 +40,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="@dimen/margin"
         android:fontFamily="@font/poppinsregular"
-        android:text="Gerobak kami siap mengantarkan\npesanan anda dengan cepat dan selamat\nhingga ke alamat anda"
+        android:text="kami siap mengantarkan\npesanan anda dengan cepat dan selamat\nhingga ke alamat anda"
         android:textAlignment="center"
         android:textColor="@color/colorGrey"
         android:textSize="14sp"
