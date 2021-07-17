@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "401648566024",
+    "firebase_url": "https://domakan-4d496-default-rtdb.firebaseio.com",
+    "project_id": "domakan-4d496",
+    "storage_bucket": "domakan-4d496.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401648566024:android:d4c1c562721636fa5fb6bd",
+        "android_client_info": {
+          "package_name": "com.aryasetyapratama.ado"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401648566024-087658jbpit6pm082de5i2t0o4c15af9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxKuwNpdywad50xSAQNd4ao8j8G-G9u10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401648566024-087658jbpit6pm082de5i2t0o4c15af9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401648566024:android:31ec65b166928dd95fb6bd",
+        "android_client_info": {
+          "package_name": "com.aryasetyapratama.finalprojectpmo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401648566024-087658jbpit6pm082de5i2t0o4c15af9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxKuwNpdywad50xSAQNd4ao8j8G-G9u10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401648566024-087658jbpit6pm082de5i2t0o4c15af9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401648566024:android:ffcd4a9e5263bf435fb6bd",
+        "android_client_info": {
+          "package_name": "com.example.tpma2_10517041"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401648566024-087658jbpit6pm082de5i2t0o4c15af9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxKuwNpdywad50xSAQNd4ao8j8G-G9u10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401648566024-087658jbpit6pm082de5i2t0o4c15af9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
