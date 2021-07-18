@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppinslight"
-                android:text="Username"
+                android:text="Nama"
                 android:textColor="@color/brownPrimary"
                 android:textSize="14sp" />
 
@@ -60,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppinslight"
-                android:text="Password"
+                android:text="Kata Sandi"
                 android:textColor="@color/brownPrimary"
                 android:textSize="14sp" />
 
@@ -83,7 +83,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/bg_btn_primary"
-        android:text="@string/login"
+        android:text="Masuk"
         android:textColor="@color/colorWhite"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,7 +98,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/bg_btn_secondary"
-        android:text="@string/sign_up"
+        android:text="Buat Akun Baru"
         android:textColor="@color/colorWhite"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
