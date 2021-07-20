@@ -111,7 +111,7 @@ public class SignUpTwo extends AppCompatActivity {
                                         @Override
                                         public void onComplete(@NonNull Task<Uri> task) {
                                             //berpindah activity
-                                            Intent gohome = new Intent(SignUpTwo.this, HomeSp.class);
+                                            Intent gohome = new Intent(SignUpTwo.this, HomeAct.class);
                                             startActivity(gohome);
                                             finish();
                                         }
@@ -131,7 +131,7 @@ public class SignUpTwo extends AppCompatActivity {
         btn_later.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gohome = new Intent(SignUpTwo.this, HomeSp.class);
+                Intent gohome = new Intent(SignUpTwo.this, HomeAct.class);
                 startActivity(gohome);
                 finish();
                 reference.getRef().child("url_photo_profile").setValue("");
