@@ -12,6 +12,7 @@
         android:orientation="vertical"
         android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -25,13 +26,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin"
+                android:layout_marginLeft="@dimen/margin"
                 android:layout_marginTop="50dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/colorBlack"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginLeft="@dimen/margin" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <!--Saldo User-->
             <LinearLayout
@@ -39,11 +40,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
                 android:layout_marginTop="4dp"
                 android:orientation="horizontal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nama_user"
-                android:layout_marginLeft="24dp">
+                app:layout_constraintTop_toBottomOf="@+id/nama_user">
 
                 <ImageView
                     android:layout_width="24dp"
@@ -56,10 +57,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
                     android:fontFamily="@font/poppinsregular"
                     android:textColor="@color/brownPrimary"
-                    android:textSize="16sp"
-                    android:layout_marginLeft="10dp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <!--User Photo-->
@@ -69,10 +70,10 @@
                 android:layout_height="70dp"
                 android:layout_marginTop="53dp"
                 android:layout_marginEnd="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
                 android:background="@drawable/bg_circle_outline"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginRight="@dimen/margin" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <com.github.florent37.shapeofview.shapes.CircleView
                 android:id="@+id/btn_to_profile"
@@ -80,15 +81,15 @@
                 android:layout_height="62dp"
                 android:layout_marginTop="57dp"
                 android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginRight="28dp">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:src="@drawable/ic_nopic"
                     android:id="@+id/photo_home_user"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_nopic" />
 
             </com.github.florent37.shapeofview.shapes.CircleView>
 
@@ -98,37 +99,37 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin"
+                android:layout_marginLeft="@dimen/margin"
                 android:layout_marginTop="34dp"
                 android:fontFamily="@font/poppinsmedium"
-                android:text="Menu Terlaris"
+                android:text="Menu Populer"
                 android:textColor="@color/brownPrimary"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-                android:layout_marginLeft="@dimen/margin" />
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
             <HorizontalScrollView
                 android:id="@+id/scroll_terlaris"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbars="none"
                 android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
                 android:layout_marginTop="14dp"
+                android:scrollbars="none"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2"
-                android:layout_marginLeft="24dp">
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                     <!--Produk-->
                     <LinearLayout
                         android:id="@+id/produk_naskun"
-                        android:layout_marginRight="16dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
                         android:orientation="vertical">
 
                         <!--Card Produk-->
@@ -180,7 +181,6 @@
                                     android:textSize="11sp" />
 
 
-
                             </LinearLayout>
 
                             <!--Nilai Produk-->
@@ -215,9 +215,9 @@
                     <!--Produk-->
                     <LinearLayout
                         android:id="@+id/produk_pisjo"
-                        android:layout_marginRight="16dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
                         android:orientation="vertical">
 
                         <!--Card Produk-->
@@ -263,8 +263,8 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Rp. 8.000"
                                     android:fontFamily="@font/poppinslight"
+                                    android:text="Rp. 8.000"
                                     android:textColor="@color/colorGrey"
                                     android:textSize="11sp" />
 
@@ -302,9 +302,9 @@
                     <!--Produk-->
                     <LinearLayout
                         android:id="@+id/produk_kupas"
-                        android:layout_marginRight="16dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
                         android:orientation="vertical">
 
                         <!--Card Produk-->
@@ -350,8 +350,8 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Rp. 10.000"
                                     android:fontFamily="@font/poppinslight"
+                                    android:text="Rp. 10.000"
                                     android:textColor="@color/colorGrey"
                                     android:textSize="11sp" />
 
@@ -387,8 +387,6 @@
                     </LinearLayout>
 
 
-
-
                 </LinearLayout>
 
             </HorizontalScrollView>
@@ -399,70 +397,70 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin"
+                android:layout_marginLeft="@dimen/margin"
                 android:layout_marginTop="24dp"
                 android:fontFamily="@font/poppinsmedium"
                 android:text="Menu Terbaru"
                 android:textColor="@color/brownPrimary"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/scroll_terlaris"
-                android:layout_marginLeft="@dimen/margin" />
+                app:layout_constraintTop_toBottomOf="@+id/scroll_terlaris" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginStart="@dimen/margin"
-                android:layout_marginEnd="@dimen/margin"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="@dimen/margin"
+                android:orientation="vertical"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title_terbaru">
 
                 <!--Kategori Produk-->
                 <LinearLayout
                     android:id="@+id/produk_sate"
-                    android:layout_marginBottom="16dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
 
                         android:layout_width="136dp"
                         android:layout_height="80dp"
-                        app:cardCornerRadius="8dp"
-                        android:elevation="24dp">
+                        android:elevation="24dp"
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/sate"/>
+                            android:src="@drawable/sate" />
                     </androidx.cardview.widget.CardView>
 
                     <!--Nama Produk-->
                     <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_marginLeft="16dp"
-                        android:layout_gravity="center"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Mie Ayam"
                             android:fontFamily="@font/poppinsmedium"
-                            android:textSize="14sp"
-                            android:textColor="@color/colorBlack"/>
+                            android:text="Mie Ayam"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Rp. 12.000"
                             android:fontFamily="@font/poppinslight"
-                            android:textSize="11sp"
-                            android:textColor="@color/colorGrey"/>
+                            android:text="Rp. 12.000"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="11sp" />
 
                     </LinearLayout>
 
@@ -497,48 +495,48 @@
                 <!--Kategori Produk-->
                 <LinearLayout
                     android:id="@+id/produk_iga"
-                    android:layout_marginBottom="16dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
 
                         android:layout_width="136dp"
                         android:layout_height="80dp"
-                        app:cardCornerRadius="8dp"
-                        android:elevation="24dp">
+                        android:elevation="24dp"
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/iga"/>
+                            android:src="@drawable/iga" />
                     </androidx.cardview.widget.CardView>
 
                     <!--Nama Produk-->
                     <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_marginLeft="16dp"
-                        android:layout_gravity="center"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Mie ayam ceker"
                             android:fontFamily="@font/poppinsmedium"
-                            android:textSize="14sp"
-                            android:textColor="@color/colorBlack"/>
+                            android:text="Mie ayam ceker"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Rp. 15.000"
                             android:fontFamily="@font/poppinslight"
-                            android:textSize="11sp"
-                            android:textColor="@color/colorGrey"/>
+                            android:text="Rp. 15.000"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="11sp" />
 
                     </LinearLayout>
 
@@ -573,48 +571,48 @@
                 <!--Kategori Produk-->
                 <LinearLayout
                     android:id="@+id/produk_mie"
-                    android:layout_marginBottom="16dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
 
                         android:layout_width="136dp"
                         android:layout_height="80dp"
-                        app:cardCornerRadius="8dp"
-                        android:elevation="24dp">
+                        android:elevation="24dp"
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/indomie"/>
+                            android:src="@drawable/indomie" />
                     </androidx.cardview.widget.CardView>
 
                     <!--Nama Produk-->
                     <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_marginLeft="16dp"
-                        android:layout_gravity="center"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Bakso Telor"
                             android:fontFamily="@font/poppinsmedium"
-                            android:textSize="14sp"
-                            android:textColor="@color/colorBlack"/>
+                            android:text="Bakso Telor"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Rp. 15.000"
                             android:fontFamily="@font/poppinslight"
-                            android:textSize="11sp"
-                            android:textColor="@color/colorGrey"/>
+                            android:text="Rp. 15.000"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="11sp" />
 
                     </LinearLayout>
 
@@ -647,8 +645,6 @@
                 </LinearLayout>
 
             </LinearLayout>
-
-
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
