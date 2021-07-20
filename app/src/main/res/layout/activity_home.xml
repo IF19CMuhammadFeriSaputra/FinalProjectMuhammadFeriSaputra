@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeAct">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Nama User-->
+            <TextView
+                android:id="@+id/nama_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:textColor="@color/colorBlack"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="@dimen/margin" />
+
+            <!--Saldo User-->
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nama_user"
+                android:layout_marginLeft="24dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_dompet" />
+
+                <TextView
+                    android:id="@+id/user_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/brownPrimary"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
+
+            <!--User Photo-->
+            <View
+                android:id="@+id/view3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="53dp"
+                android:layout_marginEnd="@dimen/margin"
+                android:background="@drawable/bg_circle_outline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="@dimen/margin" />
+
+            <com.github.florent37.shapeofview.shapes.CircleView
+                android:id="@+id/btn_to_profile"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="57dp"
+                android:layout_marginEnd="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="28dp">
+
+                <ImageView
+                    android:src="@drawable/ic_nopic"
+                    android:id="@+id/photo_home_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.github.florent37.shapeofview.shapes.CircleView>
+
+            <!--Menu Terlaris-->
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="34dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Menu Terlaris"
+                android:textColor="@color/brownPrimary"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                android:layout_marginLeft="@dimen/margin" />
+
+            <HorizontalScrollView
+                android:id="@+id/scroll_terlaris"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                android:layout_marginLeft="24dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--Produk-->
+                    <LinearLayout
+                        android:id="@+id/produk_naskun"
+                        android:layout_marginRight="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!--Card Produk-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView"
+                            android:layout_width="154dp"
+                            android:layout_height="226dp"
+                            android:elevation="32dp"
+                            app:cardCornerRadius="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/naskun" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--Deskripsi Produk-->
+                        <LinearLayout
+                            android:layout_width="154dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="start"
+                            android:orientation="horizontal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+                            <!--Judul dan Kategori-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppinsmedium"
+                                    android:text="Es Teh"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppinslight"
+                                    android:text="Rp. 3.000"
+                                    android:textColor="@color/colorGrey"
+                                    android:textSize="11sp" />
+
+
+
+                            </LinearLayout>
+
+                            <!--Nilai Produk-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/ic_star" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="6dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/poppinslight"
+                                    android:text="9.0"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--Produk-->
+                    <LinearLayout
+                        android:id="@+id/produk_pisjo"
+                        android:layout_marginRight="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!--Card Produk-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView"
+                            android:layout_width="154dp"
+                            android:layout_height="226dp"
+                            android:elevation="32dp"
+                            app:cardCornerRadius="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/pisangijo" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--Deskripsi Produk-->
+                        <LinearLayout
+                            android:layout_width="154dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="start"
+                            android:orientation="horizontal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+                            <!--Judul dan Kategori-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8.000"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppinsmedium"
+                                    android:text="Es Campur"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp. 8.000"
+                                    android:fontFamily="@font/poppinslight"
+                                    android:textColor="@color/colorGrey"
+                                    android:textSize="11sp" />
+
+                            </LinearLayout>
+
+                            <!--Nilai Produk-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/ic_star" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="6dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/poppinslight"
+                                    android:text="8.0"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--Produk-->
+                    <LinearLayout
+                        android:id="@+id/produk_kupas"
+                        android:layout_marginRight="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!--Card Produk-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView"
+                            android:layout_width="154dp"
+                            android:layout_height="226dp"
+                            android:elevation="32dp"
+                            app:cardCornerRadius="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/kuepasar" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--Deskripsi Produk-->
+                        <LinearLayout
+                            android:layout_width="154dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="start"
+                            android:orientation="horizontal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+                            <!--Judul dan Kategori-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppinsmedium"
+                                    android:text="Bakso Biasa"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp. 10.000"
+                                    android:fontFamily="@font/poppinslight"
+                                    android:textColor="@color/colorGrey"
+                                    android:textSize="11sp" />
+
+                            </LinearLayout>
+
+                            <!--Nilai Produk-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/ic_star" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="6dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/poppinslight"
+                                    android:text="8.6"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <!--Menu Terbaru-->
+            <TextView
+                android:id="@+id/title_terbaru"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Menu Terbaru"
+                android:textColor="@color/brownPrimary"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scroll_terlaris"
+                android:layout_marginLeft="@dimen/margin" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_terbaru">
+
+                <!--Kategori Produk-->
+                <LinearLayout
+                    android:id="@+id/produk_sate"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+
+                        android:layout_width="136dp"
+                        android:layout_height="80dp"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="24dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/sate"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <!--Nama Produk-->
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_marginLeft="16dp"
+                        android:layout_gravity="center"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mie Ayam"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorBlack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp. 12.000"
+                            android:fontFamily="@font/poppinslight"
+                            android:textSize="11sp"
+                            android:textColor="@color/colorGrey"/>
+
+                    </LinearLayout>
+
+                    <!--Nilai Produk-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_star" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppinslight"
+                            android:text="9.0"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--Kategori Produk-->
+                <LinearLayout
+                    android:id="@+id/produk_iga"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+
+                        android:layout_width="136dp"
+                        android:layout_height="80dp"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="24dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/iga"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <!--Nama Produk-->
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_marginLeft="16dp"
+                        android:layout_gravity="center"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mie ayam ceker"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorBlack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp. 15.000"
+                            android:fontFamily="@font/poppinslight"
+                            android:textSize="11sp"
+                            android:textColor="@color/colorGrey"/>
+
+                    </LinearLayout>
+
+                    <!--Nilai Produk-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_star" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppinslight"
+                            android:text="9.5"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--Kategori Produk-->
+                <LinearLayout
+                    android:id="@+id/produk_mie"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+
+                        android:layout_width="136dp"
+                        android:layout_height="80dp"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="24dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/indomie"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <!--Nama Produk-->
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_marginLeft="16dp"
+                        android:layout_gravity="center"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bakso Telor"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorBlack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp. 15.000"
+                            android:fontFamily="@font/poppinslight"
+                            android:textSize="11sp"
+                            android:textColor="@color/colorGrey"/>
+
+                    </LinearLayout>
+
+                    <!--Nilai Produk-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_star" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppinslight"
+                            android:text="9.0"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
