@@ -47,7 +47,7 @@ public class SignUpAct extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //ubah state menjadi loading
+                //mengubah state menjadi loading
                 btn_next.setEnabled(false);
                 btn_next.setText("Loading ...");
 
@@ -70,7 +70,7 @@ public class SignUpAct extends AppCompatActivity {
                             editor.putString(username_key, username.getText().toString());
                             editor.apply();
 
-                            // simpan ke database
+                            // menyimpan ke database
                             reference = FirebaseDatabase.getInstance().getReference()
                                     .child("Users").child(username.getText().toString());
 
