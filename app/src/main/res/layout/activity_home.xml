@@ -93,7 +93,7 @@
 
             </com.github.florent37.shapeofview.shapes.CircleView>
 
-            <!--Menu Terlaris-->
+            <!--Menu Terpopuler-->
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
