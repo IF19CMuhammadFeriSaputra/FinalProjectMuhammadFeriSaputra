@@ -51,7 +51,7 @@ public class SignInAct extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                //ubah state menjadi loading
+                //mengubah state menjadi loading
                 btn_login.setEnabled(false);
                 btn_login.setText("Loading ...");
 
@@ -60,14 +60,14 @@ public class SignInAct extends AppCompatActivity {
 
                 if(username.isEmpty()){
                     Toast.makeText(getApplicationContext(), "username kosong !", Toast.LENGTH_SHORT).show();
-                    //ubah state menjadi loading
+                    //mengubah state menjadi loading
                     btn_login.setEnabled(true);
                     btn_login.setText("LOGIN");
                 }
                 else{
                     if(password.isEmpty()){
                         Toast.makeText(getApplicationContext(), "password kosong !", Toast.LENGTH_SHORT).show();
-                        //ubah state menjadi loading
+                        //mengubah state menjadi loading
                         btn_login.setEnabled(true);
                         btn_login.setText("LOGIN");
                     }
@@ -79,10 +79,10 @@ public class SignInAct extends AppCompatActivity {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                 if(dataSnapshot.exists()){
-                                    // ambil data password dari firebase
+                                    // mengambil data password dari firebase
                                     String passwordFromFirebase = dataSnapshot.child("password").getValue().toString();
 
-                                    // validasi password
+                                    // memvalidasi password
                                     if(password.equals(passwordFromFirebase)){
 
                                         // simpan username (key)  ke local
@@ -98,14 +98,14 @@ public class SignInAct extends AppCompatActivity {
                                     }
                                     else{
                                         Toast.makeText(getApplicationContext(), "password salah", Toast.LENGTH_SHORT).show();
-                                        //ubah state menjadi loading
+                                        //mengubah state menjadi loading
                                         btn_login.setEnabled(true);
                                         btn_login.setText("LOGIN");
                                     }
                                 }
                                 else{
                                     Toast.makeText(getApplicationContext(), "username salah", Toast.LENGTH_SHORT).show();
-                                    //ubah state menjadi loading
+                                    //mengubah state menjadi loading
                                     btn_login.setEnabled(true);
                                     btn_login.setText("LOGIN");
                                 }
