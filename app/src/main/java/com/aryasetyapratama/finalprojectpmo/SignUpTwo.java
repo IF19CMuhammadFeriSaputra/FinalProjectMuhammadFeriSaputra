@@ -4,6 +4,7 @@ import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.net.wifi.hotspot2.pps.HomeSp;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.MimeTypeMap;
@@ -44,7 +45,7 @@ public class SignUpTwo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up_two);
+        setContentView(R.layout.activity_sign_up);
 
         getUsernameLocal();
 
@@ -110,7 +111,7 @@ public class SignUpTwo extends AppCompatActivity {
                                         @Override
                                         public void onComplete(@NonNull Task<Uri> task) {
                                             //berpindah activity
-                                            Intent gohome = new Intent(SignUpTwo.this, HomeAct.class);
+                                            Intent gohome = new Intent(SignUpTwo.this, HomeSp.class);
                                             startActivity(gohome);
                                             finish();
                                         }
@@ -130,7 +131,7 @@ public class SignUpTwo extends AppCompatActivity {
         btn_later.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gohome = new Intent(SignUpTwo.this, HomeAct.class);
+                Intent gohome = new Intent(SignUpTwo.this, HomeSp.class);
                 startActivity(gohome);
                 finish();
                 reference.getRef().child("url_photo_profile").setValue("");
