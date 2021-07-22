@@ -58,7 +58,7 @@ public class HomeAct extends AppCompatActivity {
         });
 
 
-        //mengambil data yg saat user itu coba login
+        //mengambil data yg saat user itu mencoba untuk login
         reference = FirebaseDatabase.getInstance().getReference()
                 .child("Users").child(username_key_new);
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -87,7 +87,7 @@ public class HomeAct extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent gotonaskun = new Intent(HomeAct.this, OrderDetailAct.class);
-                //meletakan data ke intent
+                //meletakan data ke bagian intent
                 gotonaskun.putExtra("jenis_makanan", "Nasi Kuning");
                 startActivity(gotonaskun);
             }
@@ -97,7 +97,7 @@ public class HomeAct extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent gotonaskun = new Intent(HomeAct.this, OrderDetailAct.class);
-                //meletakan data ke intent
+                //meletakan data ke bagian intent
                 gotonaskun.putExtra("jenis_makanan", "Es Pisang Ijo");
                 startActivity(gotonaskun);
             }
@@ -107,7 +107,7 @@ public class HomeAct extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent gotonaskun = new Intent(HomeAct.this, OrderDetailAct.class);
-                //meletakan data ke intent
+                //meletakan data ke bagian intent
                 gotonaskun.putExtra("jenis_makanan", "Kue Pasar");
                 startActivity(gotonaskun);
             }
@@ -117,7 +117,7 @@ public class HomeAct extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent gotonaskun = new Intent(HomeAct.this, OrderDetailAct.class);
-                //meletakan data ke intent
+                //meletakan data ke bagian intent
                 gotonaskun.putExtra("jenis_makanan", "Sate Madura");
                 startActivity(gotonaskun);
             }
@@ -127,7 +127,7 @@ public class HomeAct extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent gotonaskun = new Intent(HomeAct.this, OrderDetailAct.class);
-                //meletakan data ke intent
+                //meletakan data ke bagian intent
                 gotonaskun.putExtra("jenis_makanan", "Iga Bakar");
                 startActivity(gotonaskun);
             }
@@ -137,7 +137,7 @@ public class HomeAct extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent gotonaskun = new Intent(HomeAct.this, OrderDetailAct.class);
-                //meletakan data ke intent
+                //meletakan data ke bagian intent
                 gotonaskun.putExtra("jenis_makanan", "Mie Warkop");
                 startActivity(gotonaskun);
             }
